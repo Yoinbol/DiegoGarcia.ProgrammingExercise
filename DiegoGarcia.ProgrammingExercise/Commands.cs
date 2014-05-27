@@ -96,7 +96,21 @@ namespace DiegoGarcia.ProgrammingExercise
 
             this.Cmds.Add("help", (args) =>
             {
-                Console.WriteLine("Help under construction...");
+                Console.WriteLine("Available commands:");
+                Console.WriteLine("1- To add a square: square /X /Y /Size");
+                Console.WriteLine("2- To add a rectangle: rectangle /X /Y /Width /Height");
+                Console.WriteLine("3- To add a triangle: triangle /X1 /Y1 /X2 /Y2 /X3 /Y3");
+                Console.WriteLine("4- To add a circle: circle /X /Y /Radius");
+                Console.WriteLine("5- To add a donut: donut /X /Y /Radius1 /Radius2");
+                Console.WriteLine("6- To check what shapes contain a given point: contains /X /Y");
+                Console.WriteLine("7- To print all squares: squares");
+                Console.WriteLine("8- To print all rectangles: rectangles");
+                Console.WriteLine("9- To print all triangles: triangles");
+                Console.WriteLine("10- To print all circles: circles");
+                Console.WriteLine("11- To print all donuts: donuts");
+                Console.WriteLine("12- To print all shapes: shapes");
+                Console.WriteLine("13- To clear the console content: cls");
+                Console.WriteLine("14- To quit the program: exit");
             });
 
             this.Cmds.Add("square", (args) =>
