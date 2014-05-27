@@ -5,7 +5,7 @@ namespace DiegoGarcia.ProgrammingExercise.Shapes
     /// <summary>
     /// 
     /// </summary>
-    internal interface IShape
+    public interface IShape
     {
         /// <summary>
         /// 

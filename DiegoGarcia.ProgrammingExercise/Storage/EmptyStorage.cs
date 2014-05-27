@@ -7,14 +7,15 @@ namespace DiegoGarcia.ProgrammingExercise.Storage
     /// <summary>
     /// 
     /// </summary>
-    public class DatabaseStorage : Storage, IStorage
+    public class EmptyStorage : Storage
     {
         /// <summary>
         /// 
         /// </summary>
+        /// <returns></returns>
         public override void Load()
         {
-            throw new NotImplementedException();
+            return;
         }
 
         /// <summary>
@@ -23,7 +24,7 @@ namespace DiegoGarcia.ProgrammingExercise.Storage
         /// <param name="shape"></param>
         public override void Add(IShape shape)
         {
-            throw new NotImplementedException();
+            return;
         }
 
         /// <summary>
@@ -31,7 +32,7 @@ namespace DiegoGarcia.ProgrammingExercise.Storage
         /// </summary>
         public override void Flush()
         {
-            throw new NotImplementedException();
+            return;
         }
     }
 }

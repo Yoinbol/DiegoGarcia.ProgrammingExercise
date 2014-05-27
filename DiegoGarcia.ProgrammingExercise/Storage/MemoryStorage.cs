@@ -8,83 +8,36 @@ namespace DiegoGarcia.ProgrammingExercise.Storage
     /// <summary>
     /// 
     /// </summary>
-    internal class MemoryStorage : IStorage
+    public class MemoryStorage : Storage, IStorage
     {
-        #region Properties
-
         /// <summary>
         /// 
         /// </summary>
-        protected Dictionary<int, IShape> data { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        protected int Counter { get; set; }
-
-        #endregion
-
-
-        #region Constructor
-
-        /// <summary>
-        /// 
-        /// </summary>
-        internal MemoryStorage()
+        /// <returns></returns>
+        public override void Load()
         {
-            this.data = new Dictionary<int, IShape>();
+            return;
         }
-
-        #endregion
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="key"></param>
         /// <param name="shape"></param>
-        public void Store(IShape shape)
+        public override void Add(IShape shape)
         {
-            var key = ++Counter;
-            shape.Id = key;
-            this.data.Add(key, shape);
+            var index = ++Index;
+            shape.Id = index;
+            this.data.Add(index, shape);
         }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        public IShape Get(int key)
+        public override void Flush()
         {
-            return data[key];
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="TShape"></typeparam>
-        /// <returns></returns>
-        public IEnumerable<IShape> GetByType<TShape>() where TShape : IShape
-        {
-            return data.Values.Where(s => s is TShape);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="predicate"></param>
-        /// <returns></returns>
-        public IEnumerable<IShape> GetWhere(Func<IShape, bool> predicate)
-        {
-            return data.Values.Where(predicate);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void Load()
-        {
-            //Memory storage is not persisted. It starts from scratch on every run.
+            //Memory storage does not persist anything
+            return;
         }
     }
 }

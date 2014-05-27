@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,6 +49,9 @@
     <Compile Include="Commands.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Storage\DatabaseStorage.cs" />
+    <Compile Include="Storage\EmptyStorage.cs" />
+    <Compile Include="Storage\FileStorage.cs" />
+    <Compile Include="Storage\JsonFileStorage.cs" />
     <Compile Include="Storage\MemoryStorage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +63,8 @@
     <Compile Include="Shapes\Square.cs" />
     <Compile Include="Shapes\Triangle.cs" />
     <Compile Include="Storage\IStorage.cs" />
+    <Compile Include="Storage\Storage.cs" />
+    <Compile Include="Storage\XmlFileStorage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

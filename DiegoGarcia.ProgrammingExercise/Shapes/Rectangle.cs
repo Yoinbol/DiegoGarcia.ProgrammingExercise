@@ -11,6 +11,50 @@ namespace DiegoGarcia.ProgrammingExercise.Shapes
         /// <summary>
         /// 
         /// </summary>
+        public double Width
+        {
+            get 
+            {
+                return this.Rect.Width;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double Height
+        {
+            get
+            {
+                return this.Rect.Height;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double X
+        {
+            get
+            {
+                return this.Rect.X;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double Y
+        {
+            get
+            {
+                return this.Rect.Y;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         protected Rect Rect { get; private set; }
 
         /// <summary>

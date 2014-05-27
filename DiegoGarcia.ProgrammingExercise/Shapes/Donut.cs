@@ -11,7 +11,29 @@ namespace DiegoGarcia.ProgrammingExercise.Shapes
         /// <summary>
         /// 
         /// </summary>
-        public Point Center { get; set; }
+        private Point Center { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double X
+        {
+            get
+            {
+                return Center.X;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double Y
+        {
+            get
+            {
+                return Center.Y;
+            }
+        }
 
         /// <summary>
         /// 
@@ -52,7 +74,7 @@ namespace DiegoGarcia.ProgrammingExercise.Shapes
         /// <returns></returns>
         public override string ToString()
         {
-            var donut = string.Format("donut with centre at ({0}, {1}), radius1 {2} and radius2 {3}", Center.X, Center.Y, Radius1, Radius2);
+            var donut = string.Format("Donut with centre at ({0}, {1}), radius1 {2} and radius2 {3}", Center.X, Center.Y, Radius1, Radius2);
 
             return string.Format("{0}: {1}", base.ToString(), donut);
         }

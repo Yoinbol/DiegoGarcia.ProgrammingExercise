@@ -8,7 +8,14 @@ namespace DiegoGarcia.ProgrammingExercise.Shapes
         /// <summary>
         /// 
         /// </summary>
-        protected Point[] Points { get; private set; }
+        private Point[] Points { get; set; }
+
+        public double X1 { get { return Points[0].X; } }
+        public double X2 { get { return Points[1].X; } }
+        public double X3 { get { return Points[2].X; } }
+        public double Y1 { get { return Points[0].Y; } }
+        public double Y2 { get { return Points[1].Y; } }
+        public double Y3 { get { return Points[2].Y; } }
 
         /// <summary>
         /// 
@@ -35,7 +42,7 @@ namespace DiegoGarcia.ProgrammingExercise.Shapes
         /// <returns></returns>
         public override string ToString()
         {
-            var triangle = string.Format("triangle ({0}, {1}), ({2}, {3}), ({4}, {5})", Points[0].X, Points[0].Y, Points[1].X, Points[1].Y, Points[2].X, Points[2].Y);
+            var triangle = string.Format("Triangle ({0}, {1}), ({2}, {3}), ({4}, {5})", Points[0].X, Points[0].Y, Points[1].X, Points[1].Y, Points[2].X, Points[2].Y);
 
             return string.Format("{0}: {1}", base.ToString(), triangle);
         }

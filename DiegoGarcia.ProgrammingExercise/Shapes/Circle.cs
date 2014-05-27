@@ -11,7 +11,29 @@ namespace DiegoGarcia.ProgrammingExercise.Shapes
         /// <summary>
         /// 
         /// </summary>
-        public Point Center { get; set; }
+        private Point Center { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double X
+        {
+            get 
+            {
+                return Center.X;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double Y
+        {
+            get
+            {
+                return Center.Y;
+            }
+        }
 
         /// <summary>
         /// 
@@ -47,7 +69,7 @@ namespace DiegoGarcia.ProgrammingExercise.Shapes
         /// <returns></returns>
         public override string ToString()
         {
-            var circle = string.Format("circle with centre at ({0}, {1}) and radius {2}", Center.X, Center.Y, Radius);
+            var circle = string.Format("Circle with centre at ({0}, {1}) and radius {2}", Center.X, Center.Y, Radius);
 
             return string.Format("{0}: {1}", base.ToString(), circle);
         }

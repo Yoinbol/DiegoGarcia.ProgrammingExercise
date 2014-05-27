@@ -1,24 +1,22 @@
 ﻿using DiegoGarcia.ProgrammingExercise.Shapes;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DiegoGarcia.ProgrammingExercise.Storage
 {
-    internal interface IStorage
+    public interface IStorage
     {
         /// <summary>
         /// 
         /// </summary>
+        /// <returns></returns>
         void Load();
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="shape"></param>
-        void Store(IShape shape);
+        void Add(IShape shape);
 
         /// <summary>
         /// 
@@ -40,5 +38,10 @@ namespace DiegoGarcia.ProgrammingExercise.Storage
         /// <param name="predicate"></param>
         /// <returns></returns>
         IEnumerable<IShape> GetWhere(Func<IShape, bool> predicate);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        void Flush();
     }
 }
